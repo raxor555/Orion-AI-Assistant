@@ -1,6 +1,7 @@
 
 import JarvisInterface from "@/components/JarvisInterface";
 import { useEffect, useRef } from "react";
+import ElevenLabsConfig from "@/components/ElevenLabsConfig";
 
 const Index = () => {
   const elevenLabsWidgetRef = useRef<HTMLDivElement>(null);
@@ -27,8 +28,8 @@ const Index = () => {
         {/* Main interface */}
         <JarvisInterface className="h-full relative z-10" />
         
-        {/* Hidden container for ElevenLabs widget */}
-        <div ref={elevenLabsWidgetRef} className="hidden"></div>
+        {/* ElevenLabs widget - now visible on the page */}
+        <ElevenLabsConfig agentId="DjFo0p087khwYjZ93yX6" />
         
         {/* Credits */}
         <div className="mt-4 text-center">
