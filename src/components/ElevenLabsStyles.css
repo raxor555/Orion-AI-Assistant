@@ -1,0 +1,22 @@
+
+/* Custom styles for ElevenLabs widget integration */
+.elevenlabs-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+elevenlabs-convai {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* This attempts to style the shadow DOM elements - may require additional tweaking */
+:host {
+  --convai-primary-color: rgba(99, 179, 237, 0.8);
+  --convai-background-color: rgba(15, 23, 42, 0.6);
+  --convai-text-color: rgb(241, 245, 249);
+}
