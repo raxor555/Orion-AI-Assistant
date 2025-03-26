@@ -20,16 +20,19 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-b from-jarvis-dark to-jarvis-light/80">
-      <div className="w-full max-w-md h-[700px] relative">
-        {/* Ambient light effect */}
-        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-96 h-96 bg-jarvis-accent/20 blur-[100px] rounded-full" />
-        
+    <div className="min-h-screen flex items-center justify-center p-4 bg-black relative overflow-hidden">
+      {/* Circuit background */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src="/lovable-uploads/3ed191fb-28a1-42ac-8a1b-ccbf26ece45f.png" 
+          alt="Jarvis Interface Background" 
+          className="w-full h-full object-cover opacity-90"
+        />
+      </div>
+      
+      <div className="w-full max-w-md relative z-10">
         {/* Main interface */}
-        <JarvisInterface className="h-full relative z-10" />
-        
-        {/* ElevenLabs widget - now visible on the page */}
-        <ElevenLabsConfig agentId="DjFo0p087khwYjZ93yX6" />
+        <JarvisInterface className="relative z-10" />
         
         {/* Credits */}
         <div className="mt-4 text-center">
@@ -38,6 +41,9 @@ const Index = () => {
           </p>
         </div>
       </div>
+
+      {/* ElevenLabs widget - positioned at bottom right */}
+      <ElevenLabsConfig agentId="DjFo0p087khwYjZ93yX6" />
     </div>
   );
 };
