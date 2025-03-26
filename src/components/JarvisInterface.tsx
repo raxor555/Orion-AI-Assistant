@@ -2,8 +2,8 @@
 import React from "react";
 import { useJarvisAgent } from "@/hooks/useJarvisAgent";
 import MessageDisplay from "./MessageDisplay";
-import VoiceRecorder from "./VoiceRecorder";
 import { cn } from "@/lib/utils";
+import ElevenLabsConfig from "./ElevenLabsConfig";
 
 interface JarvisInterfaceProps {
   className?: string;
@@ -11,8 +11,8 @@ interface JarvisInterfaceProps {
 
 const JarvisInterface: React.FC<JarvisInterfaceProps> = ({ className }) => {
   const [state, actions] = useJarvisAgent();
-  const { messages, isRecording, isProcessing, error } = state;
-  const { startRecording, stopRecording, clearMessages } = actions;
+  const { messages, isProcessing, error } = state;
+  const { clearMessages } = actions;
 
   return (
     <div className={cn("flex flex-col items-center", className)}>
@@ -26,6 +26,14 @@ const JarvisInterface: React.FC<JarvisInterfaceProps> = ({ className }) => {
             <div className="w-[300px] h-[300px] rounded-full bg-jarvis-dark/60 border border-jarvis-accent/60 flex flex-col items-center justify-center relative overflow-hidden">
               {/* Pulsing core */}
               <div className="absolute w-[120px] h-[120px] rounded-full bg-jarvis-accent/20 animate-pulse-slow"></div>
+              
+              {/* Pulsing elements */}
+              <div className="absolute w-full h-full">
+                <div className="absolute top-[30%] left-[15%] w-2 h-2 bg-jarvis-accent rounded-full animate-pulse-glow" style={{animationDelay: "0.5s"}}></div>
+                <div className="absolute top-[60%] left-[20%] w-3 h-3 bg-jarvis-highlight rounded-full animate-pulse-glow" style={{animationDelay: "1.2s"}}></div>
+                <div className="absolute top-[20%] right-[25%] w-4 h-4 bg-jarvis-highlight/70 rounded-full animate-pulse-glow" style={{animationDelay: "0.8s"}}></div>
+                <div className="absolute bottom-[25%] right-[15%] w-2 h-2 bg-jarvis-accent rounded-full animate-pulse-glow" style={{animationDelay: "1.7s"}}></div>
+              </div>
               
               {/* Jarvis title */}
               <div className="mb-4 flex items-center space-x-3">
@@ -42,13 +50,10 @@ const JarvisInterface: React.FC<JarvisInterfaceProps> = ({ className }) => {
                 />
               </div>
 
-              {/* Voice recorder */}
-              <VoiceRecorder
-                isRecording={isRecording}
-                isProcessing={isProcessing}
-                onStartRecording={startRecording}
-                onStopRecording={stopRecording}
-              />
+              {/* ElevenLabs Widget in place of the voice recorder */}
+              <div className="elevenlabs-center-widget">
+                <ElevenLabsConfig agentId="DjFo0p087khwYjZ93yX6" />
+              </div>
 
               {/* Clear history button */}
               {messages.length > 0 && (
@@ -63,11 +68,11 @@ const JarvisInterface: React.FC<JarvisInterfaceProps> = ({ className }) => {
           </div>
         </div>
 
-        {/* Circuit lines - decorative elements */}
-        <div className="absolute top-0 right-[100px] w-[100px] h-[2px] bg-jarvis-accent/60"></div>
-        <div className="absolute bottom-0 left-[100px] w-[100px] h-[2px] bg-jarvis-accent/60"></div>
-        <div className="absolute left-0 top-[100px] w-[2px] h-[100px] bg-jarvis-accent/60"></div>
-        <div className="absolute right-0 bottom-[100px] w-[2px] h-[100px] bg-jarvis-accent/60"></div>
+        {/* Circuit lines - decorative elements with animation */}
+        <div className="absolute top-0 right-[100px] w-[100px] h-[2px] bg-jarvis-accent/60 animate-pulse-glow" style={{animationDelay: "1s"}}></div>
+        <div className="absolute bottom-0 left-[100px] w-[100px] h-[2px] bg-jarvis-accent/60 animate-pulse-glow" style={{animationDelay: "2s"}}></div>
+        <div className="absolute left-0 top-[100px] w-[2px] h-[100px] bg-jarvis-accent/60 animate-pulse-glow" style={{animationDelay: "0.5s"}}></div>
+        <div className="absolute right-0 bottom-[100px] w-[2px] h-[100px] bg-jarvis-accent/60 animate-pulse-glow" style={{animationDelay: "1.5s"}}></div>
       </div>
 
       {error && (

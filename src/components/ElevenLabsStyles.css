@@ -12,6 +12,23 @@
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3), 0 8px 10px -6px rgba(0, 0, 0, 0.2);
 }
 
+/* Style for the centered widget inside the Jarvis interface */
+.elevenlabs-center-widget .elevenlabs-wrapper {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  bottom: auto;
+  right: auto;
+  box-shadow: none;
+  margin: 0;
+  overflow: visible;
+}
+
+.elevenlabs-center-widget elevenlabs-convai {
+  transform: scale(0.6);
+  transform-origin: center;
+}
+
 elevenlabs-convai {
   width: 100%;
   height: 100%;
