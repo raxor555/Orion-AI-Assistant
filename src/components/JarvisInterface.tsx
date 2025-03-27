@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useJarvisAgent } from "@/hooks/useJarvisAgent";
 import MessageDisplay from "./MessageDisplay";
@@ -74,16 +73,17 @@ const JarvisInterface: React.FC<JarvisInterfaceProps> = ({ className }) => {
         <div className="absolute bottom-0 left-[100px] w-[100px] h-[2px] bg-jarvis-accent/60 animate-pulse-glow" style={{animationDelay: "2s"}}></div>
         <div className="absolute left-0 top-[100px] w-[2px] h-[100px] bg-jarvis-accent/60 animate-pulse-glow" style={{animationDelay: "0.5s"}}></div>
         <div className="absolute right-0 bottom-[100px] w-[2px] h-[100px] bg-jarvis-accent/60 animate-pulse-glow" style={{animationDelay: "1.5s"}}></div>
-        {/* New circuit lines */}
         <div className="absolute top-[70px] left-[70px] w-[70px] h-[2px] bg-blue-400/60 animate-pulse-glow" style={{animationDelay: "1.3s"}}></div>
         <div className="absolute bottom-[70px] right-[70px] w-[70px] h-[2px] bg-purple-400/60 animate-pulse-glow" style={{animationDelay: "2.2s"}}></div>
         <div className="absolute right-[70px] top-[70px] w-[2px] h-[70px] bg-jarvis-highlight/60 animate-pulse-glow" style={{animationDelay: "0.7s"}}></div>
         <div className="absolute left-[70px] bottom-[70px] w-[2px] h-[70px] bg-blue-400/60 animate-pulse-glow" style={{animationDelay: "1.9s"}}></div>
       </div>
 
-      {/* ElevenLabs Widget positioned centrally below the Jarvis interface */}
-      <div className="mt-8 elevenlabs-body-widget">
-        <ElevenLabsConfig agentId="QZvc2TuEaDwkKjClhUDH" />
+      {/* ElevenLabs Widget positioned centrally below the Jarvis interface - adjusted to be more to the right */}
+      <div className="mt-8 elevenlabs-body-widget flex justify-center">
+        <div className="ml-12">
+          <ElevenLabsConfig agentId="QZvc2TuEaDwkKjClhUDH" />
+        </div>
       </div>
 
       {error && (

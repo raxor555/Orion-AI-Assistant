@@ -24,10 +24,10 @@
   overflow: visible;
 }
 
-/* New style for the widget below the Jarvis body */
+/* Style for the widget below the Jarvis body */
 .elevenlabs-body-widget .elevenlabs-wrapper {
   position: relative;
-  width: 200px;
+  width: 220px;
   height: 60px;
   bottom: auto;
   right: auto;
@@ -37,6 +37,7 @@
   backdrop-filter: blur(8px);
   background: rgba(20, 33, 61, 0.4);
   border: 1px solid rgba(99, 179, 237, 0.3);
+  transform: translateX(10px); /* Shift it slightly to the right */
 }
 
 .elevenlabs-center-widget elevenlabs-convai {
