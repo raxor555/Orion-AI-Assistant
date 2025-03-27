@@ -24,29 +24,8 @@
   overflow: visible;
 }
 
-/* Style for the widget below the Jarvis body */
-.elevenlabs-body-widget .elevenlabs-wrapper {
-  position: relative;
-  width: 240px;
-  height: 60px;
-  bottom: auto;
-  right: auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  border-radius: 30px;
-  overflow: visible;
-  backdrop-filter: blur(8px);
-  background: rgba(20, 33, 61, 0.4);
-  border: 1px solid rgba(99, 179, 237, 0.3);
-  transform: translateX(0); /* Centered position */
-}
-
 .elevenlabs-center-widget elevenlabs-convai {
   transform: scale(0.6);
-  transform-origin: center;
-}
-
-.elevenlabs-body-widget elevenlabs-convai {
-  transform: scale(0.7);
   transform-origin: center;
 }
 
