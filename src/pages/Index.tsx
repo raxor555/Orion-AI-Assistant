@@ -12,7 +12,7 @@ const Index = () => {
       const existingWidget = document.querySelector('elevenlabs-convai');
       if (!existingWidget) {
         const widget = document.createElement('elevenlabs-convai');
-        widget.setAttribute('agent-id', 'DjFo0p087khwYjZ93yX6');
+        widget.setAttribute('agent-id', 'QZvc2TuEaDwkKjClhUDH');
         elevenLabsWidgetRef.current.appendChild(widget);
       }
     }
