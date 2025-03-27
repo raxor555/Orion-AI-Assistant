@@ -27,12 +27,18 @@ const JarvisInterface: React.FC<JarvisInterfaceProps> = ({ className }) => {
               {/* Pulsing core */}
               <div className="absolute w-[120px] h-[120px] rounded-full bg-jarvis-accent/20 animate-pulse-slow"></div>
               
-              {/* Pulsing elements */}
+              {/* Enhanced Pulsing elements - added more dynamic elements */}
               <div className="absolute w-full h-full">
                 <div className="absolute top-[30%] left-[15%] w-2 h-2 bg-jarvis-accent rounded-full animate-pulse-glow" style={{animationDelay: "0.5s"}}></div>
                 <div className="absolute top-[60%] left-[20%] w-3 h-3 bg-jarvis-highlight rounded-full animate-pulse-glow" style={{animationDelay: "1.2s"}}></div>
                 <div className="absolute top-[20%] right-[25%] w-4 h-4 bg-jarvis-highlight/70 rounded-full animate-pulse-glow" style={{animationDelay: "0.8s"}}></div>
                 <div className="absolute bottom-[25%] right-[15%] w-2 h-2 bg-jarvis-accent rounded-full animate-pulse-glow" style={{animationDelay: "1.7s"}}></div>
+                {/* New pulsing elements */}
+                <div className="absolute top-[45%] left-[10%] w-3 h-3 bg-blue-400/70 rounded-full animate-pulse-glow" style={{animationDelay: "2.1s"}}></div>
+                <div className="absolute top-[15%] left-[30%] w-2 h-2 bg-purple-400/70 rounded-full animate-pulse-glow" style={{animationDelay: "1.4s"}}></div>
+                <div className="absolute bottom-[35%] left-[25%] w-4 h-4 bg-jarvis-highlight/60 rounded-full animate-pulse-glow" style={{animationDelay: "0.9s"}}></div>
+                <div className="absolute bottom-[15%] right-[30%] w-3 h-3 bg-blue-300/70 rounded-full animate-pulse-glow" style={{animationDelay: "1.1s"}}></div>
+                <div className="absolute top-[40%] right-[15%] w-2 h-2 bg-purple-300/70 rounded-full animate-pulse-glow" style={{animationDelay: "1.9s"}}></div>
               </div>
               
               {/* Jarvis title */}
@@ -42,17 +48,12 @@ const JarvisInterface: React.FC<JarvisInterfaceProps> = ({ className }) => {
               </div>
 
               {/* Messages display */}
-              <div className="w-[260px] h-[150px] rounded-xl glass-panel overflow-hidden relative mb-4">
+              <div className="w-[260px] h-[150px] rounded-xl glass-panel overflow-hidden relative mb-2">
                 <MessageDisplay
                   messages={messages}
                   isProcessing={isProcessing}
                   className="h-full"
                 />
-              </div>
-
-              {/* ElevenLabs Widget properly positioned in the center */}
-              <div className="elevenlabs-center-widget mt-2">
-                <ElevenLabsConfig agentId="QZvc2TuEaDwkKjClhUDH" />
               </div>
 
               {/* Clear history button */}
@@ -68,11 +69,21 @@ const JarvisInterface: React.FC<JarvisInterfaceProps> = ({ className }) => {
           </div>
         </div>
 
-        {/* Circuit lines - decorative elements with animation */}
+        {/* Enhanced Circuit lines - added more decorative elements with animation */}
         <div className="absolute top-0 right-[100px] w-[100px] h-[2px] bg-jarvis-accent/60 animate-pulse-glow" style={{animationDelay: "1s"}}></div>
         <div className="absolute bottom-0 left-[100px] w-[100px] h-[2px] bg-jarvis-accent/60 animate-pulse-glow" style={{animationDelay: "2s"}}></div>
         <div className="absolute left-0 top-[100px] w-[2px] h-[100px] bg-jarvis-accent/60 animate-pulse-glow" style={{animationDelay: "0.5s"}}></div>
         <div className="absolute right-0 bottom-[100px] w-[2px] h-[100px] bg-jarvis-accent/60 animate-pulse-glow" style={{animationDelay: "1.5s"}}></div>
+        {/* New circuit lines */}
+        <div className="absolute top-[70px] left-[70px] w-[70px] h-[2px] bg-blue-400/60 animate-pulse-glow" style={{animationDelay: "1.3s"}}></div>
+        <div className="absolute bottom-[70px] right-[70px] w-[70px] h-[2px] bg-purple-400/60 animate-pulse-glow" style={{animationDelay: "2.2s"}}></div>
+        <div className="absolute right-[70px] top-[70px] w-[2px] h-[70px] bg-jarvis-highlight/60 animate-pulse-glow" style={{animationDelay: "0.7s"}}></div>
+        <div className="absolute left-[70px] bottom-[70px] w-[2px] h-[70px] bg-blue-400/60 animate-pulse-glow" style={{animationDelay: "1.9s"}}></div>
+      </div>
+
+      {/* ElevenLabs Widget positioned centrally below the Jarvis interface */}
+      <div className="mt-8 elevenlabs-body-widget">
+        <ElevenLabsConfig agentId="QZvc2TuEaDwkKjClhUDH" />
       </div>
 
       {error && (
