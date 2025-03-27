@@ -52,7 +52,7 @@ const JarvisInterface: React.FC<JarvisInterfaceProps> = ({ className }) => {
 
               {/* ElevenLabs Widget in place of the voice recorder */}
               <div className="elevenlabs-center-widget">
-                <ElevenLabsConfig agentId="DjFo0p087khwYjZ93yX6" />
+                <ElevenLabsConfig agentId="QZvc2TuEaDwkKjClhUDH" />
               </div>
 
               {/* Clear history button */}
