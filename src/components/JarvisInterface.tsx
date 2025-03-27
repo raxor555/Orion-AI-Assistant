@@ -1,3 +1,4 @@
+
 import React from "react";
 import { useJarvisAgent } from "@/hooks/useJarvisAgent";
 import MessageDisplay from "./MessageDisplay";
@@ -79,8 +80,8 @@ const JarvisInterface: React.FC<JarvisInterfaceProps> = ({ className }) => {
         <div className="absolute left-[70px] bottom-[70px] w-[2px] h-[70px] bg-blue-400/60 animate-pulse-glow" style={{animationDelay: "1.9s"}}></div>
       </div>
 
-      {/* ElevenLabs Widget positioned centrally below the Jarvis interface - adjusted to be more to the right */}
-      <div className="mt-8 elevenlabs-body-widget flex justify-center">
+      {/* ElevenLabs Widget positioned centrally below the Jarvis interface - adjusted position upward */}
+      <div className="mt-4 elevenlabs-body-widget flex justify-center">
         <div className="ml-12">
           <ElevenLabsConfig agentId="QZvc2TuEaDwkKjClhUDH" />
         </div>
