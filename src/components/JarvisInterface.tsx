@@ -80,9 +80,9 @@ const JarvisInterface: React.FC<JarvisInterfaceProps> = ({ className }) => {
         <div className="absolute left-[70px] bottom-[70px] w-[2px] h-[70px] bg-blue-400/60 animate-pulse-glow" style={{animationDelay: "1.9s"}}></div>
       </div>
 
-      {/* ElevenLabs Widget positioned centrally below the Jarvis interface - adjusted position upward */}
-      <div className="mt-4 elevenlabs-body-widget flex justify-center">
-        <div className="ml-12">
+      {/* ElevenLabs Widget - more centered and closer to the Jarvis interface */}
+      <div className="mt-2 flex justify-center">
+        <div className="elevenlabs-body-widget">
           <ElevenLabsConfig agentId="QZvc2TuEaDwkKjClhUDH" />
         </div>
       </div>
