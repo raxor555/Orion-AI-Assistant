@@ -50,8 +50,8 @@ const JarvisInterface: React.FC<JarvisInterfaceProps> = ({ className }) => {
                 />
               </div>
 
-              {/* ElevenLabs Widget in place of the voice recorder */}
-              <div className="elevenlabs-center-widget">
+              {/* ElevenLabs Widget properly positioned in the center */}
+              <div className="elevenlabs-center-widget mt-2">
                 <ElevenLabsConfig agentId="QZvc2TuEaDwkKjClhUDH" />
               </div>
 
